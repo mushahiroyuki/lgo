@@ -1,0 +1,5 @@
+// 「//」で始まる行はコメント。英語と日本語はタブで区切る
+fungible	代替可能な, 代替性のある, 代替物
+fungibility	代替可能性
+// fungibility	代替できること
+pronunciation	発音

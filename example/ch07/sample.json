@@ -1,0 +1,16 @@
+{
+  "id": "0001",
+	"name": "Cake",
+	"image":
+	{
+		"url": "images/pict0001.jpg",
+		"width": 640,
+		"height": 480
+	},
+	"thumbnail":
+	{
+		"url": "thumb/pict0001.jpg",
+		"width": 64,
+		"height": 64
+	}
+}

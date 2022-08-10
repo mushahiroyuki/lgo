@@ -1,0 +1,5 @@
+## #で始まる行はコメント
+fungible|代替可能な, 代替性のある、 代替物
+fungibility|代替可能性
+# fungibility|代替できること
+pronunciation|発音，発音記号

@@ -1,0 +1,43 @@
+package main
+
+import(
+	"fmt"
+	"sync"
+	"net/http"
+	"time"
+)
+
+func main() {
+	var wg sync.WaitGroup // WaitGroupを使って終了してもよい時を判断
+	websites := []string{  // チェックするサイトのURL。文字列のスライス
+		"https://www.oreilly.co.jp/",
+		"https://musha.com/",
+		"https://marlin-arms.com/",
+		"https://dictjuggler.net/",
+		"http://localhost/",
+	}
+
+	client := &http.Client{
+		Timeout: 200 * time.Millisecond, // タイムアウトの設定  ミリ秒単位 11章など参照
+	}
+	fmt.Printf("%T\n", client)
+	
+	for i, website := range websites { // 各サイトについて
+		go checkWebsite(website, i, &wg, client) // ゴルーチンを生成
+		wg.Add(1) // WaitGroupのカウンタを1増やす（処理が終了したら1減る）
+	}
+
+	wg.Wait() // WaitGroupのカウンタが0になるのを待つ
+	// 0になれば全部確認が終わっているので、終了する
+}
+
+// checkWebsite 指定されたページを確認
+func checkWebsite(url string, i int, wg *sync.WaitGroup, client *http.Client) {
+	defer wg.Done() // 抜ける時にWaitGroupのカウンタを1減らす
+	// 忘れないように冒頭にdeferを使って書いておく
+	if res, err := client.Get(url); err != nil { // res: response
+		fmt.Printf("%d %s  **ダウン** \n", i, url)
+	} else {
+		fmt.Printf("%d %s  code: %v\n", i, url, res.Status)
+	}
+}

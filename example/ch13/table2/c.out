@@ -1,0 +1,9 @@
+mode: set
+test_examples/table2/table.go:8.53,9.12 1 1
+test_examples/table2/table.go:10.11,11.26 1 1
+test_examples/table2/table.go:12.11,13.26 1 1
+test_examples/table2/table.go:14.11,15.26 1 1
+test_examples/table2/table.go:16.11,17.16 1 1
+test_examples/table2/table.go:20.3,20.26 1 1
+test_examples/table2/table.go:21.10,22.52 1 0
+test_examples/table2/table.go:17.16,19.4 1 1
