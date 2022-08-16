@@ -1,6 +1,6 @@
 # 初めてのGo言語
 
-![表紙](https://www.marlin-arms.com/jpn/arts/books-small/learning-go.png)
+<img src="https://www.marlin-arms.com/jpn/arts/books-small/learning-go.png" width="200px">
 
 [オライリー・ジャパン](https://www.oreilly.co.jp/)発行の『[初めてのGo言語](https://www.marlin-arms.com/support/learning-go/)』の例題用リポジトリです。
 
