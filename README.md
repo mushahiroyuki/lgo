@@ -2,12 +2,12 @@
 
 <img src="https://www.marlin-arms.com/jpn/arts/books-small/learning-go.png" width="200px">
 
-[オライリー・ジャパン](https://www.oreilly.co.jp/)発行の『[初めてのGo言語](https://www.marlin-arms.com/support/learning-go/)』の例題用リポジトリです。
+[オライリー・ジャパン](https://www.oreilly.co.jp/books/9784814400041)発行の『[初めてのGo言語](https://www.marlin-arms.com/support/learning-go/)』の例題用リポジトリです。
 
 <div>
 <ul>
   <li>	
-  例題のダウンロードは、ページ右上にある緑色のボタン［Code］をクリックして、［Download ZIP］をクリックするのが簡単です。
+  例題のダウンロードは、ページ右上にある緑色のボタン［Code］をクリックして、［Download ZIP］をクリックするのが簡単です（もちろん、「git clone」していただいても結構です）
   </li>
 
 <li>  
