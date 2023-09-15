@@ -15,7 +15,7 @@ loop:  // 下のbreakでループを抜けるための「ラベル」
 	for count := 1; ; count++ {  // 無限ループ
 		printPrompt(count) // 入力を促すメッセージを表示
 		
-		switch num, err := readUserAnswer(count); { // 答えを読み込む
+		switch num, err := readUserAnswer(); { // 答えを読み込む
 		case err != nil || num < 1 || 10 < num:
 			fmt.Println("1以上10以下の整数ではないので、ハズレです。")	// fmt.Printlnは改行する
 			// breakがなくても、このcaseはここで終了
@@ -47,7 +47,7 @@ func printPrompt(count int) {
 }
 
 // ユーザーからの答えを読み込む
-func readUserAnswer(count int) (int, error) {  // 2つの値を返す
+func readUserAnswer() (int, error) {  // 2つの値を返す
 	var inp string
 	fmt.Scanln(&inp) // 文字列として読み込み   &はポインタを表す（値を書き換えるため）
 	return strconv.Atoi(inp) // 整数に変換。errorも返る

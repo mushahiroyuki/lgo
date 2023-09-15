@@ -15,7 +15,7 @@ func main() {
 	for count:=1; ; count++ {  //「条件」を指定しないと無限ループになる
 		printPrompt(count) // 説明のメッセージを表示
 		
-		if num, err := readUserAnswer(count);
+		if num, err := readUserAnswer();
 		err != nil || num < 1 || 10 < num  {
 			// 条件の前で変数を宣言し、値の代入もできる。err以降がifの条件
 			fmt.Println("1以上10以下の整数ではないので、ハズレです。")
@@ -47,7 +47,7 @@ func printPrompt(count int) { // 引数は整数。戻り値はなし
 }
 
 // readUserAnswer ユーザーからの答えを読み込む
-func readUserAnswer(count int) (int, error) {  // 戻り値が2つある
+func readUserAnswer() (int, error) {  // 戻り値が2つある
 	var inp string
 	fmt.Scanln(&inp) // 文字列として1行読み込み。詳細は前の例のScanlnのところ参照
 	return strconv.Atoi(inp) // 整数に変換。errorも戻る
