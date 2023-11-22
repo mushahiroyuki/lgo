@@ -293,9 +293,9 @@ func main() {
 			"ミュージシャンズ": []string{"ラベル", "ベートーベン", "リスト"},
 		}
 
-		fmt.Println(teams)          // map[ミュージシャンズ:[ラベル ベートーベン リスト] ライターズ:[夏目 森 国木田] ロビンズ:[池長 渕田 山村]]
+		fmt.Println(teams)          // map[ナイツ:[武田 徳川 明智] ミュージシャンズ:[ラベル ベートーベン リスト] ライターズ:[夏目 森 国木田]]
 		fmt.Println(teams["ライターズ"]) // [夏目 森 国木田]
-		fmt.Println(teams["ロビンズ"])  // [池長 渕田 山村]
+		fmt.Println(teams["ナイツ"])   // [武田 徳川 明智]
 
 		/*
 			teams := map[string][]string {
