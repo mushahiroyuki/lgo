@@ -4,6 +4,10 @@
 
 [オライリー・ジャパン](https://www.oreilly.co.jp/books/9784814400041)発行の『[初めてのGo言語](https://www.marlin-arms.com/support/learning-go/)』の例題用リポジトリです。
 
+<p>
+<a href="../lgo2/">第2版</a>まもなく発売です。
+</p>
+
 <div>
 <ul>
   <li>	
