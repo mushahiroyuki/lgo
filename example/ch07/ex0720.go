@@ -96,7 +96,7 @@ type Controller struct {
     logic Logic
 }
 
-func (c Controller) SayHello(w http.ResponseWriter, r *http.Request) {
+func (c Controller) HandleGreeting(w http.ResponseWriter, r *http.Request) {
     c.l.Log("SayHello内: ")
     userID := r.URL.Query().Get("user_id")
     message, err := c.logic.SayHello(userID)
@@ -120,7 +120,7 @@ func main() {
     ds := NewSimpleDataStore()
     logic := NewSimpleLogic(l, ds)
     c := NewController(l, logic)
-    http.HandleFunc("/hello", c.SayHello)
+    http.HandleFunc("/hello", c.HandleGreeting)
     http.ListenAndServe(":8080", nil)
 }
 
